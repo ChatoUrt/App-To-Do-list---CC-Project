@@ -5,7 +5,7 @@ import { TodosRouter } from "./routes/to-dos-router.js";
 
 const api = express();
 
-const apiPort = process.env["APP_ENV"] || 3000;
+const apiPort = process.env["PORT"] || 3000;
 
 api.use(cors())
 api.use(express.json())
