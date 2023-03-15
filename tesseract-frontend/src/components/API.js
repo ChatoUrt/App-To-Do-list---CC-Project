@@ -9,6 +9,7 @@ export const getToDo = async () => {
         alert(`An error has occurred, trying to get a To Do: ${error.message}. Verify the information and try again`);
         return [];
     }
-    //@todo implementar lógica de manejo de errores try-catch
 
 };
+
+
