@@ -72,11 +72,11 @@ function TodoForm(props) {
             className="todo-input"
             ref={inputRef}
           />
-          <button onClick={handleDescription} className="todo-button edit">
-            <BsArrowDown />
+          <button onClick={handleDescription} className="todo-button edit ">
+            <BsArrowDown className="icon"/>
           </button>
-          <button onClick={handleSubmit} className="todo-button">
-            <BsPlusCircleFill />
+          <button onClick={handleSubmit} className="todo-button ">
+            <BsPlusCircleFill className="icon"/>
           </button>
           {showDescription && (
             <textarea

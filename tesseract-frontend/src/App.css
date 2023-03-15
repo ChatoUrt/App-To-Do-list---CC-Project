@@ -110,9 +110,18 @@ h1 {
   background-color: #ffffff;
   color: #313131;
   text-transform: capitalize;
-
+  transition: 1s;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.5);
   /*Make a hover increasing the size of the icon, maybe if you want, change them color*/
 }
+
+
+.todo-button:hover {
+  transition: 1s;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
+  padding: 14.5px 20.5px;
+}
+
 
 .todo-input.edit {
   border: 2px solid #149fff;
