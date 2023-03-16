@@ -37,44 +37,50 @@ const Todo = ({
       className={todo.is_done ? "todo-row complete" : "todo-row"}
       key={index}
     >
+    <div className="container">
       <div className="description">
+
         <div
           key={todo.id}
           onClick={() => completeTodo(todo.id)}
           className="todo"
-        >
+          >
           {todo.title}
         </div>
-        <div className="icons">
-          <RiCheckboxCircleLine
-            onClick={() => completeTodo(todo.id)}
-            className="delete-icon"
-          />
-          <RiArrowDownCircleLine
-            onClick={() => showDescription(todo.id)}
-            className="delete-icon"
-          />
-          <RiCloseCircleLine
-            onClick={() => removeTodo(todo.id)}
-            className="delete-icon"
-          />
-          <TiEdit
-            onClick={() =>
-              setEdit({
-                id: todo.id,
-                value: todo.title,
-                description: todo.description,
-              })
-            }
-            className="edit-icon"
-          />
-        </div>
-      </div>
-      {todo.showDescription && (
-        <div onClick={() => completeTodo(todo.id)} className="description">
+
+        {todo.showDescription && (
+          <div onClick={() => completeTodo(todo.id)} className="show-description">
           Description: {todo.description}
+          </div>
+        )}
+      </div>
+          <div className="icons">
+            <RiCheckboxCircleLine
+              onClick={() => completeTodo(todo.id)}
+              className="delete-icon"
+              />
+            <RiArrowDownCircleLine
+              onClick={() => showDescription(todo.id)}
+              className="delete-icon"
+              />
+            <RiCloseCircleLine
+              onClick={() => removeTodo(todo.id)}
+              className="delete-icon"
+              />
+            <TiEdit
+              onClick={() =>
+                setEdit({
+                  id: todo.id,
+                  value: todo.title,
+                  description: todo.description,
+                })
+              }
+              className="edit-icon"
+              />
+          </div>
         </div>
-      )}
+      
+      
     </div>
     // </div>
   ));
