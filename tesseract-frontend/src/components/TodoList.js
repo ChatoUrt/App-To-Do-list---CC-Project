@@ -78,7 +78,7 @@ function TodoList() {
 
   return (
     <>
-      <h1>Some thing to Do Today?</h1>
+      <h1>What's gonna do today?</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
