@@ -1,3 +1,9 @@
+:root {
+  --bg-color: pink;
+  --bg-input: #eeeeee8f;
+  --color: #2c2c2c;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +14,14 @@
 
 body {
   min-height: 100vh;
+  /*
   background: linear-gradient(
     0deg,
     rgba(255, 222, 233, 1) 0%,
     rgba(181, 255, 252, 1) 100%
-  );
+  );*/
+  background: var(--bg-color);
+  overflow: hidden;
 }
 .todo-app {
   display: flex;
@@ -24,7 +33,7 @@ body {
   text-align: center;
   margin: 50px auto;
   border-radius: 50px;
-  border: 1px solid #e5fdff;
+  border: 1px solid var(--color);
   padding: 0 50px;
   padding-bottom: 32px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
@@ -37,7 +46,7 @@ body {
 
 h1 {
   margin: 32px 0;
-  color: #0707078f;
+  color: var(--color);
   font-size: 24px;
   font-style: oblique;
   font-style: bold;
@@ -57,13 +66,16 @@ h1 {
   padding: 14px 32px 14px 16px;
   border-radius: 10px;
   border: 1px solid #cacaca;
-  background: #eeeeee8f;
+  background: var(--bg-input);
   outline: none;
   width: 70%;
-  color: #2c2c2c;
+  color: var(--color-input);
 }
 
-@keyframes bgcolor {
+
+
+
+@keyframes bgrainbow {
   0%
   {
     background:#E74C3C ;
@@ -134,6 +146,7 @@ h1 {
 
 .todo-button.edit {
   background-color: #ffffff;
+  color: var(--color-icon);
 }
 
 .todo-container {
@@ -240,6 +253,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color);
+  
 }
 
 .description {
@@ -311,4 +326,62 @@ h1 {
 
 
 /*=============================================================Color Switcher=============================================*/
+
+.color-switcher {
+  width: 10rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px 0 0 10px;
+  
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  transition: all .5s ease-in-out;
+}
+
+
+.color-switcher--open {
+  transform: translate(0, -50%);
+}
+
+
+.heading {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+
+.color-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  
+}
+
+.color-item {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%; 
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.but-conf {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border: none;
+  animation: bgrainbow infinite 10s;
+  font-size: 1.2rem;
+  position: absolute;
+  color: #fff;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 3px 0 0 3px;
+}
 
