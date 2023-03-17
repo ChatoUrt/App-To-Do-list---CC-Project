@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import colorItems, { ColorItem } from "./color-items";
 import { options } from "./coloresPaleta";
 import {useEffect, useState} from 'react'
@@ -86,17 +86,6 @@ useEffect(() => {
               <h1 className="heading">Select Color</h1>
               <div className="color-list">
                 {colors.map( (color, idx) => <ColorItem key={idx} setColor={()=>setColor(color.name)} color={color.color}/> )}
-=======
-
-const NewApp = () => {
-    
-    return (
-        <div className="newApp">
-            <div className="color-switcher">
-              <h1 className="heading">Select Color</h1>
-              <div className="color-list">
-                
->>>>>>> Color-Switcher-Feature
               </div>
             </div>
         </div>
